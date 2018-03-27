@@ -34,14 +34,12 @@ Crie uma função chamada `showTeamPosition` com as seguintes características:
     "Não temos a informação do time que está nessa posição."
 */
 function showTeamPosition(posi) {
-  var pos = posi--;
-  var time = teams[posi];
-  if(pos <= 5){
-    return 'O time que está em ' + pos + "º lugar é o " + time + ".";
+  if(posi <= 5){
+    return 'O time que está em ' + posi + "º lugar é o " + teams[--posi] + ".";
   } else {
     return 'Não temos a informação do time que está nessa posição';
   }
-}
+};
 
 /*
 Escolha 4 times do campeonato selecionado e mostre a posição dele, usando a
@@ -59,7 +57,7 @@ repetição "while".
 var x = 20;
 while(x <= 30){
   console.log(x++);
-}
+};
 
 /*
 Crie uma função chamada `convertToHex`, com as seguintes características:
@@ -97,18 +95,18 @@ function convertToHex(cor) {
     return "O hexadecimal para a cor " + cor + " é " + hexa;
     break;
     default:
-    return "A cor escolhida não pode ser identificada";
+    return 'Não temos o equivalente hexadecimal para ' + cor + '.';
   }
-}
+};
 
 /*
 Tente mostrar o hexadecimal de 8 cores diferentes usando a função criada acima.
 */
-convertToHex('yellow');
-convertToHex('black');
-convertToHex('white');
-convertToHex('red');
-convertToHex('gray');
-convertToHex('pink');
-convertToHex('blue');
-convertToHex('brown');
+console.log(convertToHex('yellow'));
+console.log(convertToHex('black'));
+console.log(convertToHex('white'));
+console.log(convertToHex('red'));
+console.log(convertToHex('gray'));
+console.log(convertToHex('pink'));
+console.log(convertToHex('blue'));
+console.log(convertToHex('brown'));
